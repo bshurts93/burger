@@ -1,8 +1,11 @@
-#landing {
-    height: 100vh;
-    
+/* GLOBAL */
+body {
+    background-image: url("../imgs/ep_naturalwhite.png");
+    background-attachment: fixed;
+    background-position: center;
 }
 
+/* BOOTSTRAP/CAROUSEL */
 .carousel-item {
     height: 100vh;
     min-height: 350px;
@@ -11,4 +14,33 @@
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
-  }
+}
+
+.row {
+    background-color: gray;
+}
+
+/* APP SECTION */
+.app-section {
+    margin: 4rem auto;
+}
+
+.burger-box {
+    background-color: rgb(204, 204, 204);
+    padding: 2rem;
+}
+
+/* FORM */
+.form-row {
+    background-color: rgb(199, 199, 199);
+}
+
+.form-group,
+.form-head {
+    display: inline-block;
+    padding-top: 1rem;
+}
+
+.form-group {
+    float: right;
+}
