@@ -1,13 +1,12 @@
 <h1>Burgers</h1>
 
-<h2>These are the best of the best</h2>
 
 <div class="not-devoured">
     <h3>These burgers are not devoured</h3>
     <ul>
         {{#each burgers}}
         {{#unless devoured}}
-        {{> burger_li devour=false}}
+        {{> burger_li devour=true}}
         {{/unless}}
         {{/each}}
     </ul>
@@ -19,7 +18,7 @@
     <ul>
         {{#each burgers}}
         {{#if devoured}}
-        {{> burger_li devour=true}}
+        {{> burger_li devour=false}}
         {{/if}}
         {{/each}}
     </ul>
