@@ -1,28 +1,6 @@
 <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
     <div class="container">
         <a class="navbar-brand" href="#"><i class="fas fa-hamburger"></i>&nbsp; Burger Boss</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive"
-            aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarResponsive">
-            <ul class="navbar-nav ml-auto">
-                <li class="nav-item active">
-                    <a class="nav-link" href="#">Home
-                        <span class="sr-only">(current)</span>
-                    </a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">About</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Services</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Contact</a>
-                </li>
-            </ul>
-        </div>
     </div>
 </nav>
 
@@ -91,9 +69,8 @@
                 <h2 class="form-head">Submit your own</h2>
 
                 <div class="form-group">
-                    <label for="name">Burger Name:</label>
-                    <input type="text" id="name-input" name="name">
-                    <button class="btn btn-primary" type="submit">Add Burger</button>
+                    <input type="text" id="name-input" name="name" placeholder="Burger name">
+                    <button class="btn burger-submit" type="submit"><i class="far fa-plus-square"></i></button>
                 </div>
 
             </form>
@@ -105,7 +82,7 @@
         <div class="col-md-6 not-devoured">
             <div class="burger-box">
                 <h3>Burgers To Eat</h3>
-
+                <hr>
                 <ul>
                     {{#each burgers}}
                     {{#unless devoured}}
@@ -120,6 +97,7 @@
         <div class="col-md-6 devoured">
             <div class="burger-box">
                 <h3>Already Eaten</h3>
+                <hr>
                 <ul>
                     {{#each burgers}}
                     {{#if devoured}}

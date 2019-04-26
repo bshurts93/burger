@@ -13,6 +13,12 @@ h3 {
     text-align: center;
 }
 
+hr {
+    background-color: #EC4E20;
+    height: 1px;
+    width: 80%;
+}
+
 /* BOOTSTRAP/CAROUSEL */
 .carousel-item {
     height: 100vh;
@@ -24,33 +30,81 @@ h3 {
     background-size: cover;
 }
 
+.carousel li {
+    background-color: #FF9505;
+}
 
+.bg-light {
+    background-color: #FFFFFC!important;
+}
+
+.navbar-brand {
+    margin: 0 auto;
+    font-size: 2rem;
+}
+
+.navbar {
+    border-bottom: #EC4E20 solid 2px;
+}
 
 /* APP SECTION */
 .app-section {
     margin: 4rem auto 8rem auto;
 }
 
-.burger-box {
+.create-form { margin-bottom: 2rem; }
+
+#name-input {
+    height: 3rem;
+    width: 20rem;
+    padding-left: 1rem;
+    border-radius: 5px 0 0 5px;
+}
+
+.burger-submit {
+    margin-top: -4px;
+    margin-left: -10px;
+    background-color: #EC4E20;
+    color: #EFEFEF;
+}
+
+.burger-submit:hover {
+    background-color: #FF9505;
+    color: #EFEFEF;
+}
+
+.fa-plus-square { font-size: 2rem; }
+
+.burger-box,
+.create-form {
     background-color: rgb(204, 204, 204);
     padding: 2rem;
     border-radius: 8px;
+    border: #EC4E20 solid 2px;
+    box-shadow: 0 .2rem .5rem #353531a1 
 }
 
 .burger {
     list-style: none;
     padding: 1rem;
+    margin-left: -2.5rem;
 }
 
 .burger-left {
-    background-color: rgb(238, 238, 238);
+    background-color: #353531;
+    color: #EFEFEF;
     border-radius: 8px 0 0 8px;
 }
 
 .burger-right {
-    background-color: rgb(29, 29, 29);
-    color: white;
+    background-color: #EC4E20;
+    color: #EFEFEF;
     border-radius: 0 8px 8px 0;
+    transition: all .4s;
+}
+
+.burger-right:hover {
+    background-color: #FF9505;
 }
 
 .burger-left,
@@ -83,6 +137,7 @@ h3 {
 
 .form-group {
     float: right;
+    padding-right: 2rem;
 }
 
 .change-devoured-state {
