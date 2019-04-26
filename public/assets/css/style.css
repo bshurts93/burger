@@ -5,6 +5,14 @@ body {
     background-position: center;
 }
 
+header {
+    padding-bottom: 5rem;
+}
+
+h3 {
+    text-align: center;
+}
+
 /* BOOTSTRAP/CAROUSEL */
 .carousel-item {
     height: 100vh;
@@ -16,18 +24,50 @@ body {
     background-size: cover;
 }
 
-.row {
-    background-color: gray;
-}
+
 
 /* APP SECTION */
 .app-section {
-    margin: 4rem auto;
+    margin: 4rem auto 8rem auto;
 }
 
 .burger-box {
     background-color: rgb(204, 204, 204);
     padding: 2rem;
+    border-radius: 8px;
+}
+
+.burger {
+    list-style: none;
+    padding: 1rem;
+}
+
+.burger-left {
+    background-color: rgb(238, 238, 238);
+    border-radius: 8px 0 0 8px;
+}
+
+.burger-right {
+    background-color: rgb(29, 29, 29);
+    color: white;
+    border-radius: 0 8px 8px 0;
+}
+
+.burger-left,
+.burger-right {
+    height: 4rem;
+}
+
+.burger-name,
+.burger-btn-text {
+    height: 4rem;
+    line-height: 4rem;
+    text-align: center;
+    overflow: hidden;
+}
+
+.burger-btn-text {
+    font-size: 200%;
 }
 
 /* FORM */
@@ -42,5 +82,9 @@ body {
 }
 
 .form-group {
+    float: right;
+}
+
+.change-devoured-state {
     float: right;
 }

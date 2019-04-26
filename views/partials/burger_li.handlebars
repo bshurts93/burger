@@ -1,7 +1,17 @@
-<li>
-	{{burger_name}}
+<li class="burger">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-10 burger-left">
+				<h4 class="burger-name">{{burger_name}}</h4>
 
-	<button class="change-devoured-state" data-id="{{id}}" data-devoured-state="{{devour}}">
-		{{#if devour}}Devour it{{else}}Send it back{{/if}}
-	</button>
+			</div>
+			<div class="col-md-2 burger-right change-devoured-state" data-id="{{id}}" data-devoured-state="{{devour}}">
+				<h4 class="burger-btn-text"> {{#if devour}}<i class="fas fa-utensils"></i>{{else}}<i
+						class="far fa-caret-square-left"></i>{{/if}}</h4>
+			</div>
+		</div>
+	</div>
+
+
+
 </li>

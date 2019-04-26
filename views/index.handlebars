@@ -36,35 +36,35 @@
             <li data-target="#carouselExampleIndicators" data-slide-to="4"></li>
         </ol>
         <div class="carousel-inner" role="listbox">
-            <div class="carousel-item active" data-interval="1000"
+            <div class="carousel-item active" data-interval="3000"
                 style="background-image: url('https://images.unsplash.com/photo-1536748240857-8179775c9a67?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2250&q=80')">
                 <div class="carousel-caption d-none d-md-block">
                     <h2 class="display-4">Black Bun Burger</h2>
                     <p class="lead">Spookylicious.</p>
                 </div>
             </div>
-            <div class="carousel-item" data-interval="1000"
+            <div class="carousel-item" data-interval="3000"
                 style="background-image: url('https://i2.wp.com/farmhousechicago.com/assets/uploads/2016/02/Classic-Burger.jpg?ssl=1')">
                 <div class="carousel-caption d-none d-md-block">
                     <h2 class="display-4">The Classic</h2>
                     <p class="lead">Through the garden. No frills.</p>
                 </div>
             </div>
-            <div class="carousel-item" data-interval="1000"
+            <div class="carousel-item" data-interval="3000"
                 style="background-image: url('https://images.unsplash.com/photo-1541544537156-7627a7a4aa1c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2250&q=80')">
                 <div class="carousel-caption d-none d-md-block">
                     <h2 class="display-4">Pulled Pork Perfection</h2>
                     <p class="lead">Smoked low and slow. Good things come to those who wait.</p>
                 </div>
             </div>
-            <div class="carousel-item" data-interval="1000"
+            <div class="carousel-item" data-interval="3000"
                 style="background-image: url('https://images.unsplash.com/photo-1552422273-f56265a5f375?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2697&q=80')">
                 <div class="carousel-caption d-none d-md-block">
                     <h2 class="display-4">The Green Thumb Burger</h2>
                     <p class="lead">100% Vegan, 100% Awesome.</p>
                 </div>
             </div>
-            <div class="carousel-item" data-interval="1000"
+            <div class="carousel-item" data-interval="3000"
                 style="background-image: url('https://images.unsplash.com/photo-1551782450-a2132b4ba21d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2250&q=80')">
                 <div class="carousel-caption d-none d-md-block">
                     <h2 class="display-4">The Criminally Crispy Chicken Burger</h2>
@@ -93,7 +93,7 @@
                 <div class="form-group">
                     <label for="name">Burger Name:</label>
                     <input type="text" id="name-input" name="name">
-                    <button type="submit">Add Burger</button>
+                    <button class="btn btn-primary" type="submit">Add Burger</button>
                 </div>
 
             </form>
@@ -102,27 +102,33 @@
 
 
     <div class="row">
-        <div class="col-md-6 burger-box not-devoured">
-            <h3>These burgers are not devoured</h3>
-            <ul>
-                {{#each burgers}}
-                {{#unless devoured}}
-                {{> burger_li devour=true}}
-                {{/unless}}
-                {{/each}}
-            </ul>
+        <div class="col-md-6 not-devoured">
+            <div class="burger-box">
+                <h3>Burgers To Eat</h3>
+
+                <ul>
+                    {{#each burgers}}
+                    {{#unless devoured}}
+                    {{> burger_li devour=true}}
+                    {{/unless}}
+                    {{/each}}
+                </ul>
+            </div>
+
         </div>
 
-        <div class="col-md-6 burger-box devoured">
-            <h3>These burgers are devoured</h3>
+        <div class="col-md-6 devoured">
+            <div class="burger-box">
+                <h3>Already Eaten</h3>
+                <ul>
+                    {{#each burgers}}
+                    {{#if devoured}}
+                    {{> burger_li devour=false}}
+                    {{/if}}
+                    {{/each}}
+                </ul>
+            </div>
 
-            <ul>
-                {{#each burgers}}
-                {{#if devoured}}
-                {{> burger_li devour=false}}
-                {{/if}}
-                {{/each}}
-            </ul>
         </div>
     </div>
 
